@@ -11,19 +11,6 @@
   <script src="/js/main.js"></script>
 
     <p>main</p>
-    <button id="previous">前へ</button>
-    <button id="next">次へ</button>
-    @foreach($questions as $index => $question)
-        <div class="ques ques-{{$index}}">
-            <p>{{$question->text}}</p>
-            <p>
-                <ul>
-                    @foreach($question->answers as $answer)
-                    <li>{{$answer->text}}</li>
-                    @endforeach
-                </ul>
-            </p>
-        </div>
-    @endforeach
+
 </body>
 </html>
