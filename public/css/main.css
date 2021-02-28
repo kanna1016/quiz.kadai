@@ -1,3 +1,44 @@
-body {
-    background-color : #FF0;
+
+@charset "utf-8";
+
+body{
+   font-family: sans-serif;
 }
+
+
+h1 {font-size:60px;
+   color:white;
+}
+
+p {font-size: 35px;
+  color:white;
+  text-align: center;
+}
+.headline{
+    text-align:center;
+}
+body {
+    background-color: #486d46;            /* 背景色 */
+    background-image: url("../images/haike.jpg"); /* 画像 */
+    background-size: cover;               /* 全画面 */
+    background-attachment: fixed;         /* 固定 */
+    background-position: center center;   /* 縦横中央 */
+ }
+ table{
+    border-collapse: collapse;
+}
+
+table{font-size: 30px;
+    color: black;
+    text-align: center;
+    background-color: whitesmoke;
+    margin-top: 110px;
+
+}
+
+th, td{
+border: 1px solid black;
+padding: 8px;
+}
+
+
