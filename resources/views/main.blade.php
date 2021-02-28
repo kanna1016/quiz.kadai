@@ -1,7 +1,9 @@
 <!doctype html>
-<html>
+<html lang="ja">
 <head>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <meta charset="UTF-8">  
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <title>問題｜クイズ</title>
 </head>
 <body>
 <script
@@ -10,7 +12,25 @@
   crossorigin="anonymous"></script>
   <script src="/js/main.js"></script>
 
-    <p>main</p>
+  <h1 class="headline">第〇問</h1>
+
+<p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+<table border="1" align="center">
+    <tr>
+        <th>１</th><th>テキストテキストテキストテキストテキスト</th>
+    </tr>
+    <tr>
+         <th>２</th><th>テキストテキストテキストテキストテキスト</th>
+    </tr>
+    <tr>
+        <th>３</th><th>テキストテキストテキストテキストテキスト</th>
+    </tr>
+    <tr>
+        <th>４</th><th>テキストテキストテキストテキストテキスト</th>    
+    </tr>
+    
+    </table>
 
 </body>
 </html>
