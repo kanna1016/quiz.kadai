@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ja">
 <head>
@@ -11,26 +12,31 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
   <script src="/js/main.js"></script>
+  <?php
+    $a = 1;
+   ?> 
+  @foreach ($questions as $question)
+ 
+    <h1 class="headline">第{{$a}}問</h1>
 
-  <h1 class="headline">第〇問</h1>
+    <p>{{$question->text}}</p>
 
-<p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-
-<table border="1" align="center">
-    <tr>
-        <th>１</th><th>テキストテキストテキストテキストテキスト</th>
-    </tr>
-    <tr>
-         <th>２</th><th>テキストテキストテキストテキストテキスト</th>
-    </tr>
-    <tr>
-        <th>３</th><th>テキストテキストテキストテキストテキスト</th>
-    </tr>
-    <tr>
-        <th>４</th><th>テキストテキストテキストテキストテキスト</th>    
-    </tr>
-    
+    <table border="1" align="center">
+    <?php
+      $b = 1;
+     ?>
+        @foreach($question->answers as $answer)
+          <tr>
+              <th>{{$b}}</th><th>{{$answer->text}}</th>
+          </tr>
+          <?php
+          $b++;
+          ?>
+        @endforeach
     </table>
-
+    <?php
+    $a++;
+    ?>
+  @endforeach
 </body>
 </html>
