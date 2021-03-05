@@ -8,6 +8,6 @@
 <body>
     <h1 class="headline">結果</h1>
 
-    <p>〇問中　　〇門</p>
+    <p>〇問中　　〇問</p>
 </body>
 </html>

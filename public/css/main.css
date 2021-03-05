@@ -6,16 +6,16 @@ body{
 }
 
 
-h1 {font-size:60px;
+h1 {font-size:50px;
    color:white;
 }
 
-p {font-size: 35px;
+p {font-size: 30px;
   color:white;
   text-align: center;
 }
 .headline{
-    text-align:center;
+    text-align: center;
 }
 body {
     background-color: #486d46;            /* 背景色 */
@@ -32,7 +32,7 @@ table{font-size: 30px;
     color: black;
     text-align: center;
     background-color: whitesmoke;
-    margin-top: 110px;
+    margin-top: 80px;
 
 }
 
@@ -43,6 +43,6 @@ padding: 8px;
 
 button{
     font-size: 30px;
-    float:right;
-    margin-right:30px;
+    float: right;
+    margin-right: 30px;
 }
