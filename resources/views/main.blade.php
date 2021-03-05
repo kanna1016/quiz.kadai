@@ -30,6 +30,6 @@
     </table>
     <button>次へ</button>
   @endforeach
-  <button>結果</button>
+  <a href="/result"><button>結果</button></a>
 </body>
 </html>
