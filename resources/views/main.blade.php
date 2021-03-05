@@ -28,7 +28,8 @@
 
         @endforeach
     </table>
- 
+    <button>次へ</button>
   @endforeach
+  <button>結果</button>
 </body>
 </html>
