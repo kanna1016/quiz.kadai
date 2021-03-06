@@ -13,23 +13,27 @@
   crossorigin="anonymous"></script>
   <script src="/js/main.js"></script>
 
-  @foreach ($questions as $a => $question)  <!--各問のループ-->
- 
-    <h1 class="headline">第{{$a+1}}問</h1>  
+  @foreach ($questions as $a => $question)
+  <div class="ques ques-{{$a}}">
+    <h1 class="headline">第{{$a+1}}問</h1>
 
-    <p>{{$question->text}}</p>  <!--問題文を表示-->
+    <p>{{$question->text}}</p>
 
     <table border="1" align="center">
 
-        @foreach($question->answers as $b => $answer) <!--選択肢のループ-->
+        @foreach($question->answers as $b => $answer)
+        
           <tr>
-              <th>{{$b+1}}</th><th>{{$answer->text}}</th> <!--選択肢の表示-->
+              <th>{{$b+1}}</th><th>{{$answer->text}}</th>
           </tr>
-
+    
         @endforeach
+        </div>
     </table>
-    <button>次へ</button>
+    <button id="">次へ</button>
+    </div>
+    
   @endforeach
-  <a href="/result"><button>結果</button></a>
+  <button>結果</button>
 </body>
 </html>
