@@ -12,7 +12,7 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
   <script src="/js/main.js"></script>
-
+  
   @foreach ($questions as $a => $question)
   <div class="ques ques-{{$a}}">
     <h1 class="headline">第{{$a+1}}問</h1>
@@ -20,20 +20,22 @@
     <p>{{$question->text}}</p>
 
     <table border="1" align="center">
-
+    
         @foreach($question->answers as $b => $answer)
         
           <tr>
               <th>{{$b+1}}</th><th>{{$answer->text}}</th>
           </tr>
-    
+          
         @endforeach
         </div>
     </table>
-    <button id="">次へ</button>
+    
     </div>
     
   @endforeach
-  <button>結果</button>
+  <button class="next">次へ</button>
+  <a href="/result">
+  <button class="result">結果</button>
 </body>
 </html>
