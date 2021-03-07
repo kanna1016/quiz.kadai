@@ -16,6 +16,21 @@ $(function(){
             $('.result').show();
         }
         else{$('.result').hide();
-    }
-        }    
-})
+         }
+    }   
+
+    $('.clickable').click(function(){
+       $.ajax({
+           url:"/api/getAnswers/"+ $(this).data("question_id"),
+           type:"get",
+       })
+       .then(function(data){
+        
+            },
+            function(){
+
+            }
+       );
+    });
+        
+});

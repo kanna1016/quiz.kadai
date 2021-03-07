@@ -23,7 +23,7 @@
     
         @foreach($question->answers as $b => $answer)
         
-          <tr>
+          <tr class="clickable" data-question_id="{{$answer->question_id}}">
               <th>{{$b+1}}</th><th>{{$answer->text}}</th>
           </tr>
           
