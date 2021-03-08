@@ -25,8 +25,8 @@ class QuizController extends Controller
         return view("result");
     }
 
-    public function getAnswers($question_id)
+    public function getAnswers($answer_id)
     {
-        return Answer::where("question_id","=",$question_id)->get();
+        return Answer::where("id","=",$answer_id)->first();
     }
 }

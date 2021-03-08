@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/getAnswers/{question_id}',[QuizController::class,'getAnswers']);
+Route::get('/getAnswers/{answer_id}',[QuizController::class,'getAnswers']);

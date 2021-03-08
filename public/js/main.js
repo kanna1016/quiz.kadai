@@ -4,6 +4,8 @@ $(function(){
     $('.next').click(function(){
         count++;
         show();
+        $('.maru').hide();
+        $('.batu').hide();
     });
 
     show();
@@ -21,14 +23,18 @@ $(function(){
 
     $('.clickable').click(function(){
        $.ajax({
-           url:"/api/getAnswers/"+ $(this).data("question_id"),
+           url:"/api/getAnswers/"+ $(this).data("answer_id"),
            type:"get",
        })
        .then(function(data){
-        
+                if (data.torf){
+                    $('.maru').show();
+                } else {
+                    $('.batu').show();
+                }
             },
             function(){
-
+                alert("error");
             }
        );
     });

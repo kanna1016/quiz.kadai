@@ -12,6 +12,15 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
   <script src="/js/main.js"></script>
+
+  <div style="position:relative">
+    <div class="maru" style="position:fixed;top:50px;left:50px;display:none">
+      <img src ="/images/maru.jpg">
+    </div>
+    <div class="batu" style="position:fixed;top:50px;left:50px;display:none">
+      <img src ="/images/batu.jpg">
+    </div>
+  </div>
   
   @foreach ($questions as $a => $question)
   <div class="ques ques-{{$a}}">
@@ -23,7 +32,7 @@
     
         @foreach($question->answers as $b => $answer)
         
-          <tr class="clickable" data-question_id="{{$answer->question_id}}">
+          <tr class="clickable" data-answer_id="{{$answer->id}}">
               <th>{{$b+1}}</th><th>{{$answer->text}}</th>
           </tr>
           
@@ -37,5 +46,7 @@
   <button class="next">次へ</button>
   <a href="/result">
   <button class="result">結果</button>
+  </a>
+
 </body>
 </html>
