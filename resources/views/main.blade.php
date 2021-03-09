@@ -11,14 +11,14 @@
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js?upd=20210309"></script>
 
   <div style="position:relative">
-    <div class="maru" style="position:fixed;top:50px;left:50px;display:none">
-      <img src ="/images/maru.jpg">
+    <div class="maru" style="position:fixed;top:50%;left:50%; -webkit-transform : translate(-50%,-50%);transform : translate(-50%,-50%);display:none">
+      <img src ="/images/maru.png">
     </div>
-    <div class="batu" style="position:fixed;top:50px;left:50px;display:none">
-      <img src ="/images/batu.jpg">
+    <div class="batu" style="position:fixed;top:50%;left:50%; -webkit-transform : translate(-50%,-50%);transform : translate(-50%,-50%);display:none">
+      <img src ="/images/batu.png">
     </div>
   </div>
   
@@ -43,10 +43,16 @@
     </div>
     
   @endforeach
-  <button class="next">次へ</button>
-  <a href="/result">
-  <button class="result">結果</button>
-  </a>
+  <button class="next" style="display:none">次へ</button>
+  <button class="goResult" style="display:none">結果</button>
 
+  <div class=result style="display:none">
+    <h1 class="headline">結果</h1>
+
+    <p>{{$a+1}}問中</p>
+    <p id="tenn_area"></p>
+
+    <a href="/top"><button>トップへ</button></a>
+  </div>
 </body>
 </html>
